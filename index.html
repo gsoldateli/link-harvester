@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Link harvester</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="panel">
+		<div class="panel__inputs">
+			<div class="inputs-container">
+				<div class="input">
+					<label for="fileUpload" class="input__label">Upload TXT or HTML file to be parsed.</label>
+					<input class="input__field" type="file" accept=".txt, .html" name="fileUpload" id="fileUpload">
+				</div>
+				<div class="input">
+					<label for="text" class="input__label">Copy text to be harvested here:</label>
+					<textarea class="input__field" name="text" rows="20" id="text"></textarea>
+				</div>
+				<input id="submitHarvest" class="input__submit" type="submit" value="Parse Content">
+			</div>
+		</div>
+		<div class="panel__results">
+			<div class="results__column">
+				<h2>Links:</h2>
+				<ul class="result-list result-list--link">
+					<li class="result-list__item">Waiting content parsing...</li>
+				</ul>
+			</div>
+			
+			<div  class="results__column">
+				<h2>E-mails:</h2>
+				<ul class="result-list result-list--email">
+					<li class="result-list__item">Waiting content parsing...</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
